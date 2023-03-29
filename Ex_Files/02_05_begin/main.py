@@ -6,15 +6,18 @@ STAGING = "staging"
 CODE_SPACE = "code_space"
 LOCAL = "local"
 
-current_env = os.environ.get("ENV_NAME", DEVELOPMENT)
+# current_env = os.environ.get("ENV_NAME", LOCAL)
+current_env = os.environ.get("ENV_NAME", STAGING)
+
+# print(current_env)
 
 if current_env == DEVELOPMENT:
-    print("Development environment")
+  print("Development environment")
 elif current_env == PRODUCTION:
-    print("Production environment")
+  print("Production environment")
 elif current_env == STAGING:
-    print("Staging environment")
+  print("Staging environment")
 elif current_env in [CODE_SPACE, LOCAL]:
-    print("Codespace or local environment")
+  print("Codespace or local environment")
 else:
-    print("Unknown environment")
+  print("Unknown env")

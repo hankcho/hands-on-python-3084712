@@ -6,12 +6,6 @@ while i < len(NAMES):
     print(NAMES[i], AGES[i])
     i += 1
 
-i = 0
-while i < len(AGES):
-    print(AGES[i])
-    i += 1
-
-# for loop is better, safer, more readable
 for name in NAMES:
     print(name)
 
@@ -24,7 +18,4 @@ for name in reversed(NAMES):
 for i in range(5):
     print(i)
 
-# # enumerate
-for i, name in enumerate(NAMES):
-    print(f"{i} {name}")
-    
+# enumerate

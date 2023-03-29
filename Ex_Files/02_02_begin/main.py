@@ -1,12 +1,19 @@
 greet = "Hello World"
-extened_grt = "Hello World, " + "this is a long string"
+extedned_grt = "Hello World, " + "this is a long string"
 
 name = "John"
 
-intrupution = f"Hello {name}"
+# print("hello" + name)
 
-greet_format = "Hello {}"
+intrupution = f"Hello {name} cho"
+
+
+greet_format = "Hello {} cho"
 
 formatted = greet_format.format(name)
 
-print(intrupution, formatted)
+print(greet, "\t", extedned_grt, intrupution, "\n", formatted)
+
+print(formatted.upper())
+print(formatted.lower())
+print(formatted.replace("John", "Henry"))

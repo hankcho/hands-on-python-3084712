@@ -1,6 +1,5 @@
-# NAMES = ("Henry", "John", "Brian", "Claire") - trying with tuple () instead of list[]
-NAMES = ["Henry", "John", "Brian", "Claire"]
-AGES = [10, 20, 30, 40]
+NAMES = ("Henry", "John", "Brian", "Claire")
+AGES = (10, 20, 30, 40)
 
 HENRY = NAMES[0]
 JOHN = NAMES[1]
@@ -19,7 +18,3 @@ print(HENRY_JOHN)
 print(BRIAN_CLAIRE)
 print(REVERSE)
 print(EVERY_OTHER)
-
-print(NAMES[1])
-
-
