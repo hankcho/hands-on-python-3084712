@@ -10,21 +10,29 @@ EINSTEIN = {
     "category": "physics",
     "motivation": "for his services to Theoretical Physics...",
 }
+
 einstein_json = json.dumps(EINSTEIN)
 back_to_dict = json.loads(einstein_json)
 print(einstein_json)
-print(back_to_dict)
-print(EINSTEIN)
+pprint(back_to_dict)
 
 with open("laureates.csv", "r") as f:
     reader = csv.DictReader(f)
     laureates = list(reader)
 
-with open("laureateJsonCreation.json", "w") as f:
-    json.dump(laureates, f, indent= 2)
+
+# 1. you can access parts of strings the same way you do lists
+#      hey[2] == "y"
+# 2. You can add to a list using
+#      my_list.append("something")
+
+laureates_beginning_with_a = []
+# LinkedIn learner code here
+
+for lareate in laureates:
+    if lareate['name'][0] == "A":
+        laureates_beginning_with_a.append(lareate)
 
 
-# pprint(EINSTEIN)
-# print("============================")
-# print(EINSTEIN)
-
+with open("laureates.json", "w") as f:
+    json.dump(laureates_beginning_with_a, f, indent=2)
